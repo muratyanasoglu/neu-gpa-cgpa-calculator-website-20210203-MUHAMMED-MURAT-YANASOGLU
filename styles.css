@@ -1,0 +1,274 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Genel Stil */
+.styled-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #6F2036;
+    font-size: 1em;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Yan Yana Küçük Input Alanları için */
+.courseDetail {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.courseDetail input {
+    flex: 1; /* Her biri eşit genişlikte */
+    min-width: 0; /* Mobil uyum için minimum genişlik */
+}
+
+/* Select kutuları için hover ve aktif durum */
+.styled-input:hover, .styled-input:focus {
+    background-color: #f0e0e5;
+    outline: none;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('home_background_img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Siyah karartma */
+    z-index: -1;
+}
+
+/* Üniversite Logosu */
+#neu-logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* Mobil uyum için boyut azaltıldı */
+    height: auto;
+    margin-top: 20px;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    animation: slideIn 0.8s ease-out;
+    position: relative;
+    z-index: 1;
+    border: 3px solid #6F2036;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2em; /* Mobil uyum için boyut azaltıldı */
+    margin-bottom: 20px;
+    color: #6F2036;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Dil Seçimi */
+#languageSelection {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#languageSelect {
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #6F2036;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#languageSelect:hover {
+    background-color: #f0e0e5;
+    transform: scale(1.05);
+}
+
+/* Seçenekler Bölümü */
+#options {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 1em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#options label {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #6F2036;
+    transition: color 0.3s;
+}
+
+#options label:hover {
+    color: #501628;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #6F2036;
+}
+
+/* Add Button (Hem GPA hem CGPA için) */
+#addButton, .green-button {
+    padding: 10px 20px;
+    background-color: #6F2036;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#addButton:hover, .green-button:hover {
+    background-color: #501628;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Ders Sayısı Bölümü */
+#courseNumber {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 1em;
+}
+
+#courseNumber input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #6F2036;
+    font-size: 1em;
+    width: calc(100% - 140px);
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Eklenmiş Ders Detayları */
+.courseDetail {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.courseDetail input {
+    flex: 1; /* Her biri eşit genişlikte */
+    min-width: 0; /* Mobil uyum için minimum genişlik */
+}
+
+/* Butonlar Bölümü */
+#buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#calculateButton, #clearButton, #saveAsPDFButton {
+    padding: 12px 20px;
+    background-color: #6F2036;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#calculateButton:hover, #clearButton:hover, #saveAsPDFButton:hover {
+    background-color: #501628;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Sonuç Bölümü */
+#result {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #6F2036;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .styled-input::placeholder {
+        font-size: 0.8em;
+    }
+    .courseDetail {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,15 @@
+gpa-cgpa-calculator/
+│
+├── index.html
+├── styles.css
+├── script.js
+├── convert_pdf.js
+├── calculate.php
+├── assets/
+│   ├── images/
+│   │   └── home_background_img.jpg
+│   └── css/
+│       └── responsive.css
+└── lang/
+    ├── en.php
+    └── tr.php
